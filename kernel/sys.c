@@ -2364,6 +2364,12 @@ SYSCALL_DEFINE1(sysinfo, struct sysinfo __user *, info)
 	return 0;
 }
 
+SYSCALL_DEFINE0(hello)
+{
+    printk("HELLO WORLD FOR PROJECT1");
+    return 0;
+}
+
 #ifdef CONFIG_COMPAT
 struct compat_sysinfo {
 	s32 uptime;
